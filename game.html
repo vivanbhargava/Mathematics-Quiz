@@ -13,12 +13,14 @@
 </head>
 
 <body>
-    <h3 id="player1_name"><span id="player1_score"></span></h3>
+    <span id="player1_name" style="margin-left: 5px; font-size: 25px;"></span>
+    <span id="player1_score" style="margin-left: 5px; font-size: 25px;"></span>
     <br>
-    <h3 id="player2_name"><span id="player2_score"></span></h3>
+    <span id="player2_name" style="margin-left: 5px; font-size: 25px;"></span>
+    <span id="player2_score" style="margin-left: 5px; font-size: 25px;"></span>
     <div class="container">
         <center>
-            <h1 style="color: whitesmoke; margin-top: -50px;">
+            <h1 style="color: whitesmoke;">
                 Mathematics Quiz
             </h1>
             <h2 id="quesplayer"></h2>
@@ -29,8 +31,31 @@
                 Question -
             </label>
             <br>
-            <input placeholder="Enter Question Here" class="btn"
+            <input placeholder="1st Number" class="btn" type="number" id="firstnum"
                 style="padding-bottom: 5px; color: blue; font-size: 20px;">
+            <br>
+            <br>
+            <span>
+                <input id="add_button" onclick="add()" class="btn btn-warning" style="font-size: 20px;" type="button"
+                    value="+">
+                <input id="minus_button" onclick="subtract()" class="btn btn-warning" style="font-size: 20px;"
+                    type="button" value="-">
+                <input id="multiply_button" onclick="multiply()" class="btn btn-warning" style="font-size: 20px;"
+                    type="button" value="x">
+                <input id="divide_button" onclick="divide()" class="btn btn-warning" style="font-size: 20px;"
+                    type="button" value="÷">
+            </span>
+            <br>
+            <br>
+            <input placeholder="2nd Number" class="btn" type="number" id="secondnum"
+                style="padding-bottom: 5px; color: blue; font-size: 20px;">
+            <br>
+            <br>
+            <br>
+            <button class="btn btn-success" style="width: 30%; height: auto; font-size: larger;" onclick="send()">
+                Send
+            </button>
+            <h4 id="result"></h4>
         </center>
     </div>
     <script src="game.js"></script>
